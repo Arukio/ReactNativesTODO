@@ -1,22 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import TaskList from './components/TaskList';
+import { createStackNavigator } from 'react-navigation';
+import EditTask from './components/EditTask';
+
+const RootStack = createStackNavigator({
+  Home: TaskList,
+  Edit: EditTask,
+},{
+  initialRouteName: 'Home'
+})
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <TaskList />
-      </View>
-    );
+  render(){
+    return <RootStack />
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#42f1f4',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-});

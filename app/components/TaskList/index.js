@@ -138,6 +138,17 @@ export default class TaskList extends Component {
                             title="Delete?"
                         />
                         <Button
+                            onPress = {()=> {
+                                this.props.navigation.navigate('Edit',{
+                                    taskId: this.state.deletItemId
+                                })
+                                this.setState({
+                                    modalShow: false
+                                })
+                            }} 
+                            title="Edit"
+                        />
+                        <Button
                             onPress = {()=>this.setState({modalShow:false}) } 
                             title="cancel"
                         />    
