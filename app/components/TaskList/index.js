@@ -135,7 +135,7 @@ export default class TaskList extends Component {
                     <View style={styles.ModalContent}>
                         <Button
                             onPress = {()=> this._deleteTodo(this.state.deletItemId) } 
-                            title="Delete?"
+                            title="Hapus?"
                         />
                         <Button
                             onPress = {()=> {
@@ -146,7 +146,7 @@ export default class TaskList extends Component {
                                     modalShow: false
                                 })
                             }} 
-                            title="Edit"
+                            title="ubah"
                         />
                         <Button
                             onPress = {()=>this.setState({modalShow:false}) } 
